@@ -29,18 +29,23 @@ public Principal save(Principal principal) {
 }
 
 @Override
-public Optional<Principal> findOne(Long id) {
+public void delete(int id) {
 	// TODO Auto-generated method stub
-	
-	
-	
-	return principalDAO.findById(id);
+	principalDAO.deleteById(id);
 }
 
 @Override
-public void delete(Long id) {
+public Principal update(Principal principal) {
 	// TODO Auto-generated method stub
-	principalDAO.findById(id);
+	return principalDAO.save(principal);
+}
+
+
+@Override
+public Principal listaporId(int id) {
+	// TODO Auto-generated method stub
+	
+	return principalDAO.findById(id).get();
 }
 	
 

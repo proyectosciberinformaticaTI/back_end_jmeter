@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.mitocode.demo.entidad.Principal;
 
-public interface IPrincipalService {
+public interface IPrincipalService extends ICRUD<Principal>{
 
 	
 	
@@ -13,9 +13,12 @@ public interface IPrincipalService {
 	public List<Principal> findAll();
 	
 	public Principal save(Principal principal);
-	
-	public Optional<Principal> findOne(Long id);
 
-	public void delete(Long id);
+	public Principal update(Principal principal);
+	
+	public void delete(int id);
+	
+	public Principal listaporId(int id);
+
 	
 }

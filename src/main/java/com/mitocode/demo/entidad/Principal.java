@@ -14,9 +14,10 @@ public class Principal {
 
 	private static final long serialVersionUID = 1L;
 	
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long codigo;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="codigo")
+	private Integer codigo;
 
 
 
@@ -34,15 +35,15 @@ private int edad;
 	
 	
 
-	public void setCodigo(Long codigo) {
+
+	public void setCodigo(int codigo) {
 	this.codigo = codigo;
 }
+
 	public long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
+	
 	public String getNombre() {
 		return nombre;
 	}
