@@ -29,20 +29,11 @@ public class Usuario {
 	
 	@Column(name="estado", nullable=false)
 	private boolean enabled;
-
-	
 	
 	
 	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="usuario_rol", joinColumns=@JoinColumn(name="id_usuario", referencedColumnName="idUsuario"), inverseJoinColumns=@JoinColumn(name="id_rol",referencedColumnName="idRol"))
 	private List<Rol> roles;
-	
-	
-	
-	
-	
-	
-	
 
 	public List<Rol> getRoles() {
 		return roles;
